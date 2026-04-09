@@ -1,4 +1,4 @@
-url: https://ShubhramPandey.github.io/dceasimR/
+url: https://heorlytics.github.io/dceasimR/
 
 template:
   bootstrap: 5
@@ -19,9 +19,9 @@ home:
     for HTA submissions.
   links:
   - text: GitHub
-    href: https://github.com/ShubhramPandey/dceasimR
+    href: https://github.com/heorlytics/dceasimR
   - text: Report a bug
-    href: https://github.com/ShubhramPandey/dceasimR/issues
+    href: https://github.com/heorlytics/dceasimR/issues
 
 navbar:
   structure:
@@ -50,11 +50,21 @@ navbar:
           href: articles/07_international_applications.html
 
 reference:
+  - title: "Package Overview"
+    contents:
+      - dceasimR-package
+
   - title: "Core DCEA Functions"
     desc: "Run aggregate and full-form DCEA analyses"
     contents:
       - run_aggregate_dcea
       - run_full_dcea
+      - print.aggregate_dcea
+      - summary.aggregate_dcea
+      - plot.aggregate_dcea
+      - print.full_dcea
+      - summary.full_dcea
+      - plot.full_dcea
 
   - title: "Inequality Measurement"
     desc: "Health inequality indices for DCEA"

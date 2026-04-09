@@ -4,7 +4,7 @@ Version: 0.1.0
 Authors@R:
     person("Shubhram", "Pandey", , "shubhram.pandey@pharmacoevidence.com",
            role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0000-0000-0000"))
+           comment = c(ORCID = "0009-0005-2303-1592"))
 Description: Implements distributional cost-effectiveness analysis (DCEA) as
     described in Cookson et al. (2020) <doi:10.1093/oso/9780198838197.001.0001>
     and the methods endorsed by NICE (2025) for health technology evaluation.
@@ -19,10 +19,10 @@ Description: Implements distributional cost-effectiveness analysis (DCEA) as
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.3
 Language: en-GB
-URL: https://ShubhramPandey.github.io/dceasimR/
-BugReports: https://github.com/ShubhramPandey/dceasimR/issues
+URL: https://heorlytics.github.io/dceasimR/
+BugReports: https://github.com/heorlytics/dceasimR/issues
 Imports:
     ggplot2 (>= 3.4.0),
     dplyr (>= 1.1.0),
@@ -48,3 +48,5 @@ Suggests:
     vdiffr
 VignetteBuilder: knitr
 Config/testthat/edition: 3
+Depends: 
+    R (>= 3.5)

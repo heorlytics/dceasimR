@@ -60,6 +60,19 @@ get_baseline_health <- function(country    = "england",
     dataset <- dplyr::filter(dataset, .data$age_group == !!age_group)
   }
 
+  # Normalise to standard column names used throughout the package
+  nm <- names(dataset)
+  if (!"group"       %in% nm && "imd_quintile"   %in% nm)
+    dataset <- dplyr::rename(dataset, group       = "imd_quintile")
+  if (!"group_label" %in% nm && "quintile_label" %in% nm)
+    dataset <- dplyr::rename(dataset, group_label = "quintile_label")
+  if (!"group_label" %in% nm && "region_label"   %in% nm)
+    dataset <- dplyr::rename(dataset, group_label = "region_label")
+  if (!"mean_hale"   %in% nm && "mean_hale_all"  %in% nm)
+    dataset <- dplyr::rename(dataset, mean_hale   = "mean_hale_all")
+  if (!"se_hale"     %in% nm && "se_hale_all"    %in% nm)
+    dataset <- dplyr::rename(dataset, se_hale     = "se_hale_all")
+
   # Ensure cumulative_rank (ridit scores) is present
   if (!"cumulative_rank" %in% names(dataset)) {
     dataset <- dplyr::mutate(

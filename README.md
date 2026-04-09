@@ -82,17 +82,17 @@ launch_dcea_app()
 ## Documentation
 
 Full documentation is available at
-**<https://ShubhramPandey.github.io/dceasimR/>**
+**<https://heorlytics.github.io/dceasimR/>**
 
 Tutorials:
 
-1. [Introduction to DCEA](https://ShubhramPandey.github.io/dceasimR/articles/01_introduction_to_dcea.html)
-2. [Aggregate DCEA Tutorial](https://ShubhramPandey.github.io/dceasimR/articles/02_aggregate_dcea_tutorial.html)
-3. [Full-Form DCEA Tutorial](https://ShubhramPandey.github.io/dceasimR/articles/03_full_dcea_tutorial.html)
-4. [Inequality Measures](https://ShubhramPandey.github.io/dceasimR/articles/04_inequality_measures.html)
-5. [Social Welfare Functions](https://ShubhramPandey.github.io/dceasimR/articles/05_social_welfare_functions.html)
-6. [NICE Submission Workflow](https://ShubhramPandey.github.io/dceasimR/articles/06_nice_submission_workflow.html)
-7. [International Applications](https://ShubhramPandey.github.io/dceasimR/articles/07_international_applications.html)
+1. [Introduction to DCEA](https://heorlytics.github.io/dceasimR/articles/01_introduction_to_dcea.html)
+2. [Aggregate DCEA Tutorial](https://heorlytics.github.io/dceasimR/articles/02_aggregate_dcea_tutorial.html)
+3. [Full-Form DCEA Tutorial](https://heorlytics.github.io/dceasimR/articles/03_full_dcea_tutorial.html)
+4. [Inequality Measures](https://heorlytics.github.io/dceasimR/articles/04_inequality_measures.html)
+5. [Social Welfare Functions](https://heorlytics.github.io/dceasimR/articles/05_social_welfare_functions.html)
+6. [NICE Submission Workflow](https://heorlytics.github.io/dceasimR/articles/06_nice_submission_workflow.html)
+7. [International Applications](https://heorlytics.github.io/dceasimR/articles/07_international_applications.html)
 
 ## Citation
 
@@ -105,7 +105,7 @@ citation("dceasimR")
 ```
 Pandey S (2026). dceasimR: Distributional Cost-Effectiveness Analysis
 for Health Technology Assessment. R package version 0.1.0.
-https://ShubhramPandey.github.io/dceasimR/
+https://heorlytics.github.io/dceasimR/
 ```
 
 ## Key references

@@ -4,13 +4,17 @@
 #' stratified by Index of Multiple Deprivation (IMD) quintile. Quintile 1 is
 #' the most deprived; quintile 5 is the least deprived.
 #'
-#' @format A tibble with 5 rows and 10 variables:
+#' @format A tibble with 5 rows and 14 variables:
 #' \describe{
 #'   \item{imd_quintile}{Integer (1-5). 1 = most deprived.}
+#'   \item{group}{Integer (1-5). Standard group identifier (same as \code{imd_quintile}).}
 #'   \item{quintile_label}{Character. Human-readable quintile label.}
+#'   \item{group_label}{Character. Standard group label (same as \code{quintile_label}).}
+#'   \item{mean_hale}{Numeric. HALE at birth (years), both sexes (standard name).}
 #'   \item{mean_hale_all}{Numeric. HALE at birth (years), both sexes.}
 #'   \item{mean_hale_male}{Numeric. HALE at birth (years), males.}
 #'   \item{mean_hale_female}{Numeric. HALE at birth (years), females.}
+#'   \item{se_hale}{Numeric. Standard error of \code{mean_hale} (standard name).}
 #'   \item{se_hale_all}{Numeric. Standard error of \code{mean_hale_all}.}
 #'   \item{pop_share}{Numeric. Proportion of population in quintile (sums to 1).}
 #'   \item{cumulative_rank}{Numeric. Ridit score for concentration index.}

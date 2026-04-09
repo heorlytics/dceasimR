@@ -12,17 +12,22 @@ library(usethis)
 # True values require ONS/PHE data access agreements.
 
 england_imd_hale <- tibble(
-  imd_quintile   = 1:5,
-  quintile_label = c("Q1 (most deprived)", "Q2", "Q3", "Q4",
-                     "Q5 (least deprived)"),
-  mean_hale_all  = c(52.1, 56.3, 59.8, 63.2, 66.8),
-  mean_hale_male = c(50.4, 54.7, 58.4, 61.9, 65.6),
+  imd_quintile    = 1:5,
+  group           = 1:5,
+  quintile_label  = c("Q1 (most deprived)", "Q2", "Q3", "Q4",
+                      "Q5 (least deprived)"),
+  group_label     = c("Q1 (most deprived)", "Q2", "Q3", "Q4",
+                      "Q5 (least deprived)"),
+  mean_hale       = c(52.1, 56.3, 59.8, 63.2, 66.8),
+  mean_hale_all   = c(52.1, 56.3, 59.8, 63.2, 66.8),
+  mean_hale_male  = c(50.4, 54.7, 58.4, 61.9, 65.6),
   mean_hale_female = c(53.8, 57.9, 61.2, 64.5, 68.0),
-  se_hale_all    = c(0.42, 0.38, 0.35, 0.33, 0.30),
-  pop_share      = rep(0.20, 5),
+  se_hale         = c(0.42, 0.38, 0.35, 0.33, 0.30),
+  se_hale_all     = c(0.42, 0.38, 0.35, 0.33, 0.30),
+  pop_share       = rep(0.20, 5),
   cumulative_rank = c(0.10, 0.30, 0.50, 0.70, 0.90),
-  year           = 2019L,
-  source         = "PHE/OHID Health Profiles Plus (proxy estimates)"
+  year            = 2019L,
+  source          = "PHE/OHID Health Profiles Plus (proxy estimates)"
 )
 
 usethis::use_data(england_imd_hale, overwrite = TRUE)
