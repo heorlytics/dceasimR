@@ -1,0 +1,135 @@
+url: https://ShubhramPandey.github.io/dceasimR/
+
+template:
+  bootstrap: 5
+  bootswatch: flatly
+  bslib:
+    primary: "#2C5F8A"
+    base_font:
+      google: "Source Sans Pro"
+    heading_font:
+      google: "Source Serif Pro"
+
+home:
+  title: "dceasimR — Distributional Cost-Effectiveness Analysis"
+  description: >
+    The first comprehensive R package for DCEA, implementing methods
+    endorsed by NICE (2025). Calculate equity-efficiency trade-offs,
+    health inequality impacts, and social welfare function analyses
+    for HTA submissions.
+  links:
+  - text: GitHub
+    href: https://github.com/ShubhramPandey/dceasimR
+  - text: Report a bug
+    href: https://github.com/ShubhramPandey/dceasimR/issues
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [search, github]
+  components:
+    intro:
+      text: "Get started"
+      href: articles/01_introduction_to_dcea.html
+    articles:
+      text: "Tutorials"
+      menu:
+        - text: "1. Introduction to DCEA"
+          href: articles/01_introduction_to_dcea.html
+        - text: "2. Aggregate DCEA"
+          href: articles/02_aggregate_dcea_tutorial.html
+        - text: "3. Full-Form DCEA"
+          href: articles/03_full_dcea_tutorial.html
+        - text: "4. Inequality Measures"
+          href: articles/04_inequality_measures.html
+        - text: "5. Social Welfare Functions"
+          href: articles/05_social_welfare_functions.html
+        - text: "6. NICE Submission Workflow"
+          href: articles/06_nice_submission_workflow.html
+        - text: "7. International Applications"
+          href: articles/07_international_applications.html
+
+reference:
+  - title: "Core DCEA Functions"
+    desc: "Run aggregate and full-form DCEA analyses"
+    contents:
+      - run_aggregate_dcea
+      - run_full_dcea
+
+  - title: "Inequality Measurement"
+    desc: "Health inequality indices for DCEA"
+    contents:
+      - calc_sii
+      - calc_rii
+      - calc_concentration_index
+      - calc_atkinson_index
+      - calc_gini
+      - calc_all_inequality_indices
+
+  - title: "Social Welfare Functions"
+    desc: "EDE health, equity weights, and welfare analysis"
+    contents:
+      - calc_ede
+      - calc_ede_profile
+      - calc_social_welfare
+      - calc_equity_weights
+      - calc_equity_weighted_nhb
+      - calc_equity_weight_profile
+
+  - title: "Visualisation"
+    desc: "Plots for DCEA reporting"
+    contents:
+      - plot_equity_impact_plane
+      - plot_lorenz_curve
+      - plot_ede_profile
+      - plot_inequality_staircase
+      - plot_dcea_tornado
+
+  - title: "Baseline Health Data"
+    desc: "Access preloaded health distributions"
+    contents:
+      - get_baseline_health
+      - merge_cea_with_baseline
+
+  - title: "Inequality Staircase"
+    contents:
+      - build_staircase_data
+      - compute_lorenz_data
+      - compute_generalised_lorenz_data
+
+  - title: "Sensitivity Analysis"
+    contents:
+      - run_dcea_sensitivity
+
+  - title: "Reporting and Export"
+    desc: "NICE-formatted outputs and reports"
+    contents:
+      - generate_nice_table
+      - export_dcea_excel
+      - generate_dcea_report
+
+  - title: "Data Preparation Utilities"
+    contents:
+      - validate_dcea_data
+      - normalise_weights
+      - compute_ridit_scores
+      - prepare_subgroup_cea
+
+  - title: "Interactive App"
+    contents:
+      - launch_dcea_app
+
+  - title: "Datasets"
+    desc: "Preloaded baseline health distributions"
+    contents:
+      - england_imd_hale
+      - england_imd_qol
+      - canada_income_hale
+      - who_regions_hale
+      - example_cea_output
+      - nsclc_dcea_example
+
+news:
+  releases:
+    - text: "Version 0.1.0"
+      href: news/index.html

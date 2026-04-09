@@ -1,0 +1,88 @@
+---
+title: "Inequality Measurement in DCEA"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Inequality Measurement in DCEA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(dceasimR)
+```
+
+## Overview
+
+`dceasimR` provides five inequality measures commonly used in DCEA:
+SII, RII, concentration index, Atkinson index, and Gini coefficient.
+
+```{r data}
+df <- tibble::tibble(
+  group      = 1:5,
+  mean_hale  = c(52.1, 56.3, 59.8, 63.2, 66.8),
+  pop_share  = rep(0.2, 5)
+)
+```
+
+## Slope Index of Inequality (SII)
+
+The SII estimates the absolute health difference from the most to the least
+deprived using a weighted regression on ridit scores.
+
+```{r sii}
+calc_sii(df, "mean_hale", "group", "pop_share")
+```
+
+A positive SII means better health in more advantaged groups.
+
+## Relative Index of Inequality (RII)
+
+The RII expresses the SII relative to mean health, facilitating comparisons
+across populations and time.
+
+```{r rii}
+calc_rii(df, "mean_hale", "group", "pop_share")
+```
+
+## Concentration Index
+
+```{r ci}
+calc_concentration_index(df, "mean_hale", "group", "pop_share",
+                          type = "standard")
+```
+
+## Atkinson Index
+
+```{r atkinson}
+calc_atkinson_index(df$mean_hale, df$pop_share, epsilon = 1)
+```
+
+## Gini Coefficient
+
+```{r gini}
+calc_gini(df$mean_hale, df$pop_share)
+```
+
+## All indices at once
+
+```{r all}
+calc_all_inequality_indices(df, "mean_hale", "group", "pop_share",
+                             epsilon_values = c(0.5, 1, 2))
+```
+
+## Lorenz curves
+
+```{r lorenz-data}
+ld <- compute_lorenz_data(df$mean_hale, df$pop_share, "England 2019")
+```
+
+```{r lorenz-plot, fig.width = 5, fig.height = 4}
+library(ggplot2)
+ggplot(ld, aes(cum_pop, cum_health)) +
+  geom_line(colour = "steelblue", linewidth = 1) +
+  geom_abline(linetype = "dashed") +
+  labs(x = "Cumulative population", y = "Cumulative health",
+       title = "Lorenz Curve") +
+  theme_minimal()
+```

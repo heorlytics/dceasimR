@@ -1,0 +1,85 @@
+---
+title: "NICE Submission Workflow"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{NICE Submission Workflow}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(dceasimR)
+```
+
+## NICE 2025 requirements
+
+NICE (2025) Methods Support Document (PMG36) on health inequalities requires
+manufacturers to submit DCEA as supplementary evidence when:
+
+- The intervention targets a condition with documented SES gradients.
+- The ICER is above £20,000/QALY and equity may affect the decision.
+- The committee requests equity evidence.
+
+## Step-by-step NICE workflow
+
+### 1. Determine method
+
+Use **aggregate DCEA** unless subgroup-specific evidence is available.
+
+```{r step1}
+# Check whether disease has SES gradient
+# Use disease_icd to auto-lookup HES utilisation
+result <- run_aggregate_dcea(
+  icer            = 28000,
+  inc_qaly        = 0.45,
+  inc_cost        = 12600,
+  population_size = 12000,
+  disease_icd     = "C34",
+  wtp             = 20000,
+  opportunity_cost_threshold = 13000
+)
+```
+
+### 2. Sensitivity analysis
+
+NICE expects sensitivity over key parameters, especially η.
+
+```{r step2}
+sa <- run_dcea_sensitivity(result, params_to_vary = c("eta", "wtp", "occ_threshold"))
+sa$eta_profile
+```
+
+### 3. Generate submission table
+
+```{r step3}
+tbl <- generate_nice_table(result, format = "tibble")
+knitr::kable(tbl, caption = "DCEA Summary Table (NICE format)")
+```
+
+### 4. Export to Excel
+
+```{r step4, eval = FALSE}
+export_dcea_excel(result, "dcea_submission.xlsx")
+```
+
+### 5. Present impact plane
+
+```{r step5, fig.width = 6, fig.height = 5}
+plot_equity_impact_plane(result)
+```
+
+## NICE compliance checklist
+
+- [ ] Aggregate DCEA conducted using England IMD quintile baseline
+- [ ] Opportunity cost threshold set to £13,000/QALY
+- [ ] Sensitivity analysis over η range 0-10
+- [ ] Equity-efficiency impact plane included
+- [ ] SII, RII, and Atkinson index reported pre and post
+- [ ] NICE submission table generated
+- [ ] Results presented as supplementary to base-case CEA
+
+## References
+
+NICE (2025). *Technology Evaluation Methods: Health Inequalities* (PMG36).
+National Institute for Health and Care Excellence.

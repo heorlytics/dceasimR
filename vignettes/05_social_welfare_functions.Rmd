@@ -1,0 +1,79 @@
+---
+title: "Social Welfare Functions in DCEA"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Social Welfare Functions in DCEA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(dceasimR)
+```
+
+## Atkinson Social Welfare Function
+
+The Atkinson SWF evaluates population health by penalising inequality
+according to the parameter eta (η). Higher η = stronger aversion to
+inequality.
+
+The Equally Distributed Equivalent (EDE) health is the key output:
+the level of health that, if equally distributed, would give the same
+social welfare as the actual distribution.
+
+## Choosing eta: evidence from the UK
+
+Robson et al. (2017) elicited public preferences for health inequality
+aversion in England using a questionnaire. Their central estimate was η ≈ 1,
+with a range of 0.1 to 4.8 across the sample.
+
+NICE (2025) does not mandate a specific η but expects sensitivity analysis
+across a range including 0, 1, and higher values.
+
+## EDE calculation
+
+```{r ede}
+health  <- c(52.1, 56.3, 59.8, 63.2, 66.8)
+weights <- rep(0.2, 5)
+
+# eta = 0: no inequality aversion (arithmetic mean)
+calc_ede(health, weights, eta = 0)
+
+# eta = 1: moderate aversion (geometric mean)
+calc_ede(health, weights, eta = 1)
+
+# eta = 5: strong aversion
+calc_ede(health, weights, eta = 5)
+```
+
+## EDE profile
+
+```{r profile, fig.width = 6, fig.height = 4}
+profile <- calc_ede_profile(health, weights, eta_range = seq(0, 10, 0.1))
+library(ggplot2)
+ggplot(profile, aes(eta, ede)) +
+  geom_line(colour = "steelblue", linewidth = 1) +
+  labs(x = expression(eta), y = "EDE (years)",
+       title = "EDE Profile") +
+  theme_minimal()
+```
+
+## Equity weights
+
+```{r weights}
+ew <- calc_equity_weights(health, weights, eta = 1)
+ew  # Q1 (most deprived) gets highest weight
+```
+
+## Social welfare decomposition
+
+```{r swf}
+post_health <- health + c(0.5, 0.6, 0.5, 0.4, 0.3)
+calc_social_welfare(health, post_health, weights, eta = 1)
+```
+
+## References
+
+Robson M et al. (2017). Health Economics 26(10): 1328-1334.
+<https://doi.org/10.1002/hec.3386>

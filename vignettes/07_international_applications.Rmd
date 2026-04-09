@@ -1,0 +1,84 @@
+---
+title: "International Applications of DCEA"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{International Applications of DCEA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(dceasimR)
+```
+
+## Canada (CADTH workflow)
+
+CADTH uses income quintile stratification. Use `country = "canada"` to
+access the preloaded Statistics Canada HALE data.
+
+```{r canada}
+canada_baseline <- get_baseline_health("canada", "income_quintile")
+canada_baseline
+
+result_ca <- run_aggregate_dcea(
+  icer                       = 50000,   # CAD/QALY
+  inc_qaly                   = 0.40,
+  inc_cost                   = 20000,
+  population_size            = 8000,
+  baseline_health            = canada_baseline,
+  wtp                        = 50000,
+  opportunity_cost_threshold = 30000
+)
+summary(result_ca)
+```
+
+## WHO regional analysis
+
+For global health or multi-country analyses, use WHO regional HALE data.
+
+```{r who}
+who_baseline <- get_baseline_health("who_regions")
+who_baseline
+```
+
+```{r who-dcea, fig.width = 6, fig.height = 5}
+result_who <- run_aggregate_dcea(
+  icer                       = 1000,
+  inc_qaly                   = 0.35,
+  inc_cost                   = 350,
+  population_size            = 500000,
+  baseline_health            = who_baseline,
+  wtp                        = 1000,
+  opportunity_cost_threshold = 600
+)
+plot_equity_impact_plane(result_who)
+```
+
+## Custom country workflow
+
+For countries without preloaded data, supply your own baseline:
+
+```{r custom}
+custom_baseline <- tibble::tibble(
+  group           = 1:4,
+  group_label     = c("Poorest quartile", "Q2", "Q3", "Richest quartile"),
+  mean_hale       = c(55.0, 60.0, 65.0, 70.0),
+  se_hale         = c(0.8, 0.7, 0.6, 0.5),
+  pop_share       = rep(0.25, 4),
+  cumulative_rank = c(0.125, 0.375, 0.625, 0.875),
+  year            = 2022L,
+  source          = "Custom country data"
+)
+
+result_custom <- run_aggregate_dcea(
+  icer                       = 5000,
+  inc_qaly                   = 0.3,
+  inc_cost                   = 1500,
+  population_size            = 100000,
+  baseline_health            = custom_baseline,
+  wtp                        = 5000,
+  opportunity_cost_threshold = 3000
+)
+summary(result_custom)
+```

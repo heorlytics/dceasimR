@@ -1,0 +1,89 @@
+---
+title: "Aggregate DCEA Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Aggregate DCEA Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(dceasimR)
+```
+
+## Overview
+
+This tutorial walks through aggregate DCEA step-by-step for a hypothetical
+NSCLC (lung cancer) treatment, following the Love-Koh et al. (2019) method.
+
+## Step 1: Define CEA inputs
+
+```{r inputs}
+icer            <- 28000   # £/QALY
+inc_qaly        <- 0.45    # incremental QALYs per patient
+inc_cost        <- 12600   # incremental cost per patient (£)
+population_size <- 12000   # eligible patients in England
+wtp             <- 20000   # NICE standard WTP (£/QALY)
+occ_threshold   <- 13000   # opportunity cost threshold (£/QALY)
+```
+
+## Step 2: Load baseline health distribution
+
+```{r baseline}
+baseline <- get_baseline_health("england", "imd_quintile")
+baseline
+```
+
+## Step 3: Run aggregate DCEA
+
+```{r run-dcea}
+result <- run_aggregate_dcea(
+  icer                       = icer,
+  inc_qaly                   = inc_qaly,
+  inc_cost                   = inc_cost,
+  population_size            = population_size,
+  disease_icd                = "C34",
+  wtp                        = wtp,
+  opportunity_cost_threshold = occ_threshold
+)
+```
+
+## Step 4: Interpret outputs
+
+```{r summary}
+summary(result)
+```
+
+### Per-group results
+
+```{r by-group}
+result$by_group
+```
+
+### Inequality impact
+
+```{r inequality}
+result$inequality_impact
+```
+
+## Step 5: Visualise
+
+```{r plane, fig.width = 6, fig.height = 5}
+plot_equity_impact_plane(result)
+```
+
+```{r ede, fig.width = 6, fig.height = 4}
+plot_ede_profile(result, eta_range = seq(0, 10, 0.2))
+```
+
+## Step 6: Generate NICE submission table
+
+```{r nice-table}
+generate_nice_table(result, format = "tibble")
+```
+
+## References
+
+Love-Koh J et al. (2019). Value in Health 22(5): 518-526.
+<https://doi.org/10.1016/j.jval.2018.10.007>

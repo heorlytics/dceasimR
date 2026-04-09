@@ -1,0 +1,25 @@
+# R package ignores
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Generated documentation
+/docs
+
+# Compiled R files
+*.Rcheck/
+*.tar.gz
+
+# Cached vignette output
+/vignettes/*.html
+/vignettes/*.pdf
+/vignettes/figure/
+
+# Test artefacts
+/tests/testthat/_snaps/
+
+# OS files
+.DS_Store
+Thumbs.db

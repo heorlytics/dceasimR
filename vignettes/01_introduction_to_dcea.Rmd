@@ -1,0 +1,75 @@
+---
+title: "Introduction to Distributional Cost-Effectiveness Analysis"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to Distributional Cost-Effectiveness Analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment  = "#>"
+)
+library(dceasimR)
+```
+
+## Why standard CEA ignores equity
+
+Standard cost-effectiveness analysis (CEA) answers one question: does this
+intervention generate more health per pound spent than the alternatives? It
+aggregates health across all patients as if a QALY gained by the most
+deprived person equals a QALY gained by the least deprived.
+
+This approach is silent on *who* benefits — and therefore on how interventions
+affect health inequalities between socioeconomic groups.
+
+## The DCEA framework
+
+Distributional Cost-Effectiveness Analysis (DCEA), developed by Cookson,
+Griffin, Norheim and Culyer (2020), extends standard CEA by:
+
+1. **Distributing** aggregate health gains across socioeconomic groups.
+2. **Measuring** the impact on health inequality (SII, Atkinson index, etc.).
+3. **Evaluating** the social welfare gain using inequality-aversion weights.
+4. **Visualising** the equity-efficiency trade-off on an impact plane.
+
+## When to use aggregate vs full-form DCEA
+
+| Method | When to use | Data required |
+|--------|-------------|---------------|
+| **Aggregate DCEA** | Standard TA; disease-level HES data available | ICER, incremental QALY/cost, disease ICD |
+| **Full-form DCEA** | Subgroup trial data available; HST or exceptional case | Per-group QALY/cost estimates |
+
+NICE (2025) recommends aggregate DCEA as the default supplementary analysis
+for technology appraisals where equity is relevant.
+
+## Quick start
+
+```{r quick-start}
+result <- run_aggregate_dcea(
+  icer            = 28000,
+  inc_qaly        = 0.45,
+  inc_cost        = 12600,
+  population_size = 12000,
+  wtp             = 20000,
+  opportunity_cost_threshold = 13000
+)
+
+summary(result)
+```
+
+```{r impact-plane, fig.width = 6, fig.height = 5}
+plot_equity_impact_plane(result)
+```
+
+## Key references
+
+- Cookson R, Griffin S, Norheim OF, Culyer AJ (2020). *Distributional
+  Cost-Effectiveness Analysis*. Oxford University Press.
+  <https://doi.org/10.1093/oso/9780198838197.001.0001>
+
+- NICE (2025). *Technology Evaluation Methods: Health Inequalities* (PMG36).
+
+- Love-Koh J et al. (2019). Value in Health 22(5): 518-526.
