@@ -65,5 +65,5 @@ plot_equity_impact_plane(result)
 \references{
 Cookson R, Asaria M, Ali S, Shaw R, Doran T, Goldblatt P
   (2017). Health equity monitoring for healthcare quality assurance. Social
-  Science & Medicine 198: 148-156. \doi{10.1016/j.socscimed.2017.12.036}
+  Science & Medicine 198: 148-156.
 }

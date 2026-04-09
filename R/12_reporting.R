@@ -60,7 +60,7 @@ generate_nice_table <- function(dcea_result, format = "tibble",
     }
     ft <- flextable::flextable(tbl_full)
     ft <- flextable::bold(ft, i = nrow(tbl_full))
-    ft <- flextable::set_caption(ft, "Distributional Cost-Effectiveness Analysis — NICE Submission Table")
+    ft <- flextable::set_caption(ft, "Distributional Cost-Effectiveness Analysis \u2014 NICE Submission Table")
     return(ft)
   }
 

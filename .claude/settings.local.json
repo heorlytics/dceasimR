@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i 's|ShubhramPandey/dceasimR|heorlytics/dceasimR|g' README.md)",
+      "Bash(sed -i 's|articles/01_|articles/v01_|g; s|articles/02_|articles/v02_|g; s|articles/03_|articles/v03_|g; s|articles/04_|articles/v04_|g; s|articles/05_|articles/v05_|g; s|articles/06_|articles/v06_|g; s|articles/07_|articles/v07_|g' README.md)"
+    ]
+  }
+}

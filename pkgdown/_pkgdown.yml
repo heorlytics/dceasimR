@@ -30,24 +30,24 @@ navbar:
   components:
     intro:
       text: "Get started"
-      href: articles/01_introduction_to_dcea.html
+      href: articles/v01_introduction_to_dcea.html
     articles:
       text: "Tutorials"
       menu:
         - text: "1. Introduction to DCEA"
-          href: articles/01_introduction_to_dcea.html
+          href: articles/v01_introduction_to_dcea.html
         - text: "2. Aggregate DCEA"
-          href: articles/02_aggregate_dcea_tutorial.html
+          href: articles/v02_aggregate_dcea_tutorial.html
         - text: "3. Full-Form DCEA"
-          href: articles/03_full_dcea_tutorial.html
+          href: articles/v03_full_dcea_tutorial.html
         - text: "4. Inequality Measures"
-          href: articles/04_inequality_measures.html
+          href: articles/v04_inequality_measures.html
         - text: "5. Social Welfare Functions"
-          href: articles/05_social_welfare_functions.html
+          href: articles/v05_social_welfare_functions.html
         - text: "6. NICE Submission Workflow"
-          href: articles/06_nice_submission_workflow.html
+          href: articles/v06_nice_submission_workflow.html
         - text: "7. International Applications"
-          href: articles/07_international_applications.html
+          href: articles/v07_international_applications.html
 
 reference:
   - title: "Package Overview"

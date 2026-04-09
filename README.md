@@ -2,8 +2,8 @@
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/dceasimR)](https://CRAN.R-project.org/package=dceasimR)
-[![R-CMD-check](https://github.com/ShubhramPandey/dceasimR/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/ShubhramPandey/dceasimR/actions/workflows/R-CMD-check.yml)
-[![Codecov test coverage](https://codecov.io/gh/ShubhramPandey/dceasimR/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ShubhramPandey/dceasimR?branch=main)
+[![R-CMD-check](https://github.com/heorlytics/dceasimR/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/heorlytics/dceasimR/actions/workflows/R-CMD-check.yml)
+[![Codecov test coverage](https://codecov.io/gh/heorlytics/dceasimR/branch/main/graph/badge.svg)](https://app.codecov.io/gh/heorlytics/dceasimR?branch=main)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
@@ -44,7 +44,7 @@ install.packages("dceasimR")
 
 # Development version from GitHub
 # install.packages("remotes")
-remotes::install_github("ShubhramPandey/dceasimR")
+remotes::install_github("heorlytics/dceasimR")
 ```
 
 ## Quick start
@@ -81,18 +81,8 @@ launch_dcea_app()
 
 ## Documentation
 
-Full documentation is available at
+Full documentation and tutorials are available at
 **<https://heorlytics.github.io/dceasimR/>**
-
-Tutorials:
-
-1. [Introduction to DCEA](https://heorlytics.github.io/dceasimR/articles/01_introduction_to_dcea.html)
-2. [Aggregate DCEA Tutorial](https://heorlytics.github.io/dceasimR/articles/02_aggregate_dcea_tutorial.html)
-3. [Full-Form DCEA Tutorial](https://heorlytics.github.io/dceasimR/articles/03_full_dcea_tutorial.html)
-4. [Inequality Measures](https://heorlytics.github.io/dceasimR/articles/04_inequality_measures.html)
-5. [Social Welfare Functions](https://heorlytics.github.io/dceasimR/articles/05_social_welfare_functions.html)
-6. [NICE Submission Workflow](https://heorlytics.github.io/dceasimR/articles/06_nice_submission_workflow.html)
-7. [International Applications](https://heorlytics.github.io/dceasimR/articles/07_international_applications.html)
 
 ## Citation
 
@@ -112,7 +102,7 @@ https://heorlytics.github.io/dceasimR/
 
 > Cookson R, Griffin S, Norheim OF, Culyer AJ (2020). *Distributional
 > Cost-Effectiveness Analysis: Quantifying Health Equity Impacts and Trade-Offs.*
-> Oxford University Press. <https://doi.org/10.1093/oso/9780198838197.001.0001>
+> Oxford University Press (ISBN:9780198838197).
 
 > Love-Koh J, Asaria M, Cookson R, Griffin S (2019). The Social Distribution
 > of Health: Estimating Quality-Adjusted Life Expectancy in England. *Value in
@@ -132,6 +122,6 @@ https://heorlytics.github.io/dceasimR/
 ## Contributing
 
 Contributions are welcome! Please see
-[CONTRIBUTING.md](https://github.com/ShubhramPandey/dceasimR/blob/main/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/heorlytics/dceasimR/blob/main/CONTRIBUTING.md)
 and file issues at
-<https://github.com/ShubhramPandey/dceasimR/issues>.
+<https://github.com/heorlytics/dceasimR/issues>.

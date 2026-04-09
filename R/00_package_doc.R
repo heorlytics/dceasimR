@@ -20,7 +20,7 @@
 #' @section Key references:
 #' Cookson R, Griffin S, Norheim OF, Culyer AJ (2020). Distributional
 #' Cost-Effectiveness Analysis. Oxford University Press.
-#' \doi{10.1093/oso/9780198838197.001.0001}
+#' Oxford University Press (ISBN:9780198838197).
 #'
 #' Love-Koh J, Asaria M, Cookson R, Griffin S (2019). The Social Distribution
 #' of Health: Estimating Quality-Adjusted Life Expectancy in England. Value in
@@ -34,3 +34,6 @@
 #' @name dceasimR-package
 #' @aliases dceasimR
 "_PACKAGE"
+
+# Suppress R CMD check NOTEs for rlang .data pronoun and bare column names
+utils::globalVariables(c(".data", "nhb_base"))

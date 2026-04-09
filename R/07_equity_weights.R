@@ -22,7 +22,7 @@
 #' @references
 #' Cookson R, Griffin S, Norheim OF, Culyer AJ (2020). Distributional
 #' Cost-Effectiveness Analysis. Oxford University Press.
-#' \doi{10.1093/oso/9780198838197.001.0001}
+#' Oxford University Press (ISBN:9780198838197).
 #'
 #' Robson M, Asaria M, Cookson R, Tsuchiya A, Ali S (2017). Eliciting the
 #' Level of Health Inequality Aversion in England. Health Economics

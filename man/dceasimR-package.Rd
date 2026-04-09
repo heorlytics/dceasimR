@@ -29,7 +29,7 @@ sensitivity analysis.
 
 Cookson R, Griffin S, Norheim OF, Culyer AJ (2020). Distributional
 Cost-Effectiveness Analysis. Oxford University Press.
-\doi{10.1093/oso/9780198838197.001.0001}
+Oxford University Press (ISBN:9780198838197).
 
 Love-Koh J, Asaria M, Cookson R, Griffin S (2019). The Social Distribution
 of Health: Estimating Quality-Adjusted Life Expectancy in England. Value in
@@ -43,12 +43,12 @@ Analysis: A Tutorial. Medical Decision Making 36(1): 8-19.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://ShubhramPandey.github.io/dceasimR/}
-  \item Report bugs at \url{https://github.com/ShubhramPandey/dceasimR/issues}
+  \item \url{https://heorlytics.github.io/dceasimR/}
+  \item Report bugs at \url{https://github.com/heorlytics/dceasimR/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Shubhram Pandey \email{shubhram.pandey@pharmacoevidence.com} (\href{https://orcid.org/0009-0005-2303-1592}{ORCID})
+\strong{Maintainer}: Shubhram Pandey \email{shubhram.pandey@heorlytics.com} (\href{https://orcid.org/0009-0005-2303-1592}{ORCID})
 
 }
