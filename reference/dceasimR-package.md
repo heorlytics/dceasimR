@@ -34,8 +34,8 @@ impact plane visualisation, and sensitivity analysis.
 ## Key references
 
 Cookson R, Griffin S, Norheim OF, Culyer AJ (2020). Distributional
-Cost-Effectiveness Analysis. Oxford University Press.
-[doi:10.1093/oso/9780198838197.001.0001](https://doi.org/10.1093/oso/9780198838197.001.0001)
+Cost-Effectiveness Analysis. Oxford University Press. Oxford University
+Press (ISBN:9780198838197).
 
 Love-Koh J, Asaria M, Cookson R, Griffin S (2019). The Social
 Distribution of Health: Estimating Quality-Adjusted Life Expectancy in
@@ -50,11 +50,11 @@ Analysis: A Tutorial. Medical Decision Making 36(1): 8-19.
 
 Useful links:
 
-- <https://ShubhramPandey.github.io/dceasimR/>
+- <https://heorlytics.github.io/dceasimR/>
 
-- Report bugs at <https://github.com/ShubhramPandey/dceasimR/issues>
+- Report bugs at <https://github.com/heorlytics/dceasimR/issues>
 
 ## Author
 
-**Maintainer**: Shubhram Pandey <shubhram.pandey@pharmacoevidence.com>
+**Maintainer**: Shubhram Pandey <shubhram.pandey@heorlytics.com>
 ([ORCID](https://orcid.org/0009-0005-2303-1592))

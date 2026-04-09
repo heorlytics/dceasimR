@@ -80,7 +80,6 @@ A ggplot2 object.
 Cookson R, Asaria M, Ali S, Shaw R, Doran T, Goldblatt P (2017). Health
 equity monitoring for healthcare quality assurance. Social Science &
 Medicine 198: 148-156.
-[doi:10.1016/j.socscimed.2017.12.036](https://doi.org/10.1016/j.socscimed.2017.12.036)
 
 ## Examples
 

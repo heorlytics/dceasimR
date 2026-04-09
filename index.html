@@ -11,8 +11,8 @@
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Distributional Cost-Effectiveness Analysis for Health Technology Assessment">
-<meta name="description" content="Implements distributional cost-effectiveness analysis (DCEA) as described in Cookson et al. (2020) &lt;doi:10.1093/oso/9780198838197.001.0001&gt; and the methods endorsed by NICE (2025) for health technology evaluation. Provides functions for both aggregate and full-form DCEA, inequality measurement (Atkinson index, Gini coefficient, slope index of inequality, relative index of inequality), social welfare function evaluation, equity-efficiency impact plane visualisation, and sensitivity analysis over inequality aversion parameters. Includes preloaded baseline health distributions for England (by IMD quintile), Canada (income quintile), and global WHO regions. Suitable for academic research, health technology assessment submissions, and public health policy analysis.">
-<meta property="og:description" content="Implements distributional cost-effectiveness analysis (DCEA) as described in Cookson et al. (2020) &lt;doi:10.1093/oso/9780198838197.001.0001&gt; and the methods endorsed by NICE (2025) for health technology evaluation. Provides functions for both aggregate and full-form DCEA, inequality measurement (Atkinson index, Gini coefficient, slope index of inequality, relative index of inequality), social welfare function evaluation, equity-efficiency impact plane visualisation, and sensitivity analysis over inequality aversion parameters. Includes preloaded baseline health distributions for England (by IMD quintile), Canada (income quintile), and global WHO regions. Suitable for academic research, health technology assessment submissions, and public health policy analysis.">
+<meta name="description" content="Implements distributional cost-effectiveness analysis (DCEA) as described in Cookson et al. (2020, ISBN:9780198838197) and the methods endorsed by NICE (2025) for health technology evaluation. Provides functions for both aggregate and full-form DCEA, inequality measurement (Atkinson index, Gini coefficient, slope index of inequality, relative index of inequality), social welfare function evaluation, equity-efficiency impact plane visualisation, and sensitivity analysis over inequality aversion parameters. Includes baseline health distributions for England (by IMD quintile), Canada (income quintile), and global WHO regions. Suitable for academic research, health technology assessment submissions, and public health policy analysis.">
+<meta property="og:description" content="Implements distributional cost-effectiveness analysis (DCEA) as described in Cookson et al. (2020, ISBN:9780198838197) and the methods endorsed by NICE (2025) for health technology evaluation. Provides functions for both aggregate and full-form DCEA, inequality measurement (Atkinson index, Gini coefficient, slope index of inequality, relative index of inequality), social welfare function evaluation, equity-efficiency impact plane visualisation, and sensitivity analysis over inequality aversion parameters. Includes baseline health distributions for England (by IMD quintile), Canada (income quintile), and global WHO regions. Suitable for academic research, health technology assessment submissions, and public health policy analysis.">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -35,13 +35,13 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/01_introduction_to_dcea.html">Introduction to Distributional Cost-Effectiveness Analysis</a></li>
-    <li><a class="dropdown-item" href="articles/02_aggregate_dcea_tutorial.html">Aggregate DCEA Tutorial</a></li>
-    <li><a class="dropdown-item" href="articles/03_full_dcea_tutorial.html">Full-Form DCEA Tutorial</a></li>
-    <li><a class="dropdown-item" href="articles/04_inequality_measures.html">Inequality Measurement in DCEA</a></li>
-    <li><a class="dropdown-item" href="articles/05_social_welfare_functions.html">Social Welfare Functions in DCEA</a></li>
-    <li><a class="dropdown-item" href="articles/06_nice_submission_workflow.html">NICE Submission Workflow</a></li>
-    <li><a class="dropdown-item" href="articles/07_international_applications.html">International Applications of DCEA</a></li>
+<li><a class="dropdown-item" href="articles/v01_introduction_to_dcea.html">Introduction to Distributional Cost-Effectiveness Analysis</a></li>
+    <li><a class="dropdown-item" href="articles/v02_aggregate_dcea_tutorial.html">Aggregate DCEA Tutorial</a></li>
+    <li><a class="dropdown-item" href="articles/v03_full_dcea_tutorial.html">Full-Form DCEA Tutorial</a></li>
+    <li><a class="dropdown-item" href="articles/v04_inequality_measures.html">Inequality Measurement in DCEA</a></li>
+    <li><a class="dropdown-item" href="articles/v05_social_welfare_functions.html">Social Welfare Functions in DCEA</a></li>
+    <li><a class="dropdown-item" href="articles/v06_nice_submission_workflow.html">NICE Submission Workflow</a></li>
+    <li><a class="dropdown-item" href="articles/v07_international_applications.html">International Applications of DCEA</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="news/index.html">Changelog</a></li>
@@ -103,7 +103,7 @@
 <span></span>
 <span><span class="co"># Development version from GitHub</span></span>
 <span><span class="co"># install.packages("remotes")</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ShubhramPandey/dceasimR"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"heorlytics/dceasimR"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="quick-start">Quick start<a class="anchor" aria-label="anchor" href="#quick-start"></a>
@@ -140,17 +140,7 @@
 <div class="section level2">
 <h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h2>
-<p>Full documentation is available at <strong><a href="https://heorlytics.github.io/dceasimR/" class="uri">https://heorlytics.github.io/dceasimR/</a></strong></p>
-<p>Tutorials:</p>
-<ol style="list-style-type: decimal">
-<li><a href="https://heorlytics.github.io/dceasimR/articles/01_introduction_to_dcea.html">Introduction to DCEA</a></li>
-<li><a href="https://heorlytics.github.io/dceasimR/articles/02_aggregate_dcea_tutorial.html">Aggregate DCEA Tutorial</a></li>
-<li><a href="https://heorlytics.github.io/dceasimR/articles/03_full_dcea_tutorial.html">Full-Form DCEA Tutorial</a></li>
-<li><a href="https://heorlytics.github.io/dceasimR/articles/04_inequality_measures.html">Inequality Measures</a></li>
-<li><a href="https://heorlytics.github.io/dceasimR/articles/05_social_welfare_functions.html">Social Welfare Functions</a></li>
-<li><a href="https://heorlytics.github.io/dceasimR/articles/06_nice_submission_workflow.html">NICE Submission Workflow</a></li>
-<li><a href="https://heorlytics.github.io/dceasimR/articles/07_international_applications.html">International Applications</a></li>
-</ol>
+<p>Full documentation and tutorials are available at <strong><a href="https://heorlytics.github.io/dceasimR/" class="uri">https://heorlytics.github.io/dceasimR/</a></strong></p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
@@ -166,7 +156,7 @@ https://heorlytics.github.io/dceasimR/</code></pre>
 <h2 id="key-references">Key references<a class="anchor" aria-label="anchor" href="#key-references"></a>
 </h2>
 <blockquote>
-<p>Cookson R, Griffin S, Norheim OF, Culyer AJ (2020). <em>Distributional Cost-Effectiveness Analysis: Quantifying Health Equity Impacts and Trade-Offs.</em> Oxford University Press. <a href="https://doi.org/10.1093/oso/9780198838197.001.0001" class="external-link uri">https://doi.org/10.1093/oso/9780198838197.001.0001</a></p>
+<p>Cookson R, Griffin S, Norheim OF, Culyer AJ (2020). <em>Distributional Cost-Effectiveness Analysis: Quantifying Health Equity Impacts and Trade-Offs.</em> Oxford University Press (<a href="ISBN:9780198838197" class="uri">ISBN:9780198838197</a>).</p>
 </blockquote>
 <blockquote>
 <p>Love-Koh J, Asaria M, Cookson R, Griffin S (2019). The Social Distribution of Health: Estimating Quality-Adjusted Life Expectancy in England. <em>Value in Health</em> 22(5): 518-526. <a href="https://doi.org/10.1016/j.jval.2018.10.007" class="external-link uri">https://doi.org/10.1016/j.jval.2018.10.007</a></p>
@@ -184,7 +174,7 @@ https://heorlytics.github.io/dceasimR/</code></pre>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
 </h2>
-<p>Contributions are welcome! Please see <a href="https://github.com/ShubhramPandey/dceasimR/blob/main/CONTRIBUTING.md" class="external-link">CONTRIBUTING.md</a> and file issues at <a href="https://github.com/ShubhramPandey/dceasimR/issues" class="external-link uri">https://github.com/ShubhramPandey/dceasimR/issues</a>.</p>
+<p>Contributions are welcome! Please see <a href="https://github.com/heorlytics/dceasimR/blob/main/CONTRIBUTING.md" class="external-link">CONTRIBUTING.md</a> and file issues at <a href="https://github.com/heorlytics/dceasimR/issues" class="external-link uri">https://github.com/heorlytics/dceasimR/issues</a>.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -203,6 +193,12 @@ https://heorlytics.github.io/dceasimR/</code></pre>
 </ul>
 </div>
 
+<div class="community">
+<h2 data-toc-skip>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CONTRIBUTING.html">Contributing guide</a></li>
+</ul>
+</div>
 
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
@@ -222,8 +218,8 @@ https://heorlytics.github.io/dceasimR/</code></pre>
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=dceasimR" class="external-link"><img src="https://www.r-pkg.org/badges/version/dceasimR" alt="CRAN status"></a></li>
-<li><a href="https://github.com/ShubhramPandey/dceasimR/actions/workflows/R-CMD-check.yml" class="external-link"><img src="https://github.com/ShubhramPandey/dceasimR/actions/workflows/R-CMD-check.yml/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://app.codecov.io/gh/ShubhramPandey/dceasimR?branch=main" class="external-link"><img src="https://codecov.io/gh/ShubhramPandey/dceasimR/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/heorlytics/dceasimR/actions/workflows/R-CMD-check.yml" class="external-link"><img src="https://github.com/heorlytics/dceasimR/actions/workflows/R-CMD-check.yml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://app.codecov.io/gh/heorlytics/dceasimR?branch=main" class="external-link"><img src="https://codecov.io/gh/heorlytics/dceasimR/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 <li><a href="https://opensource.org/licenses/MIT" class="external-link"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></li>
 </ul>

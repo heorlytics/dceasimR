@@ -1,15 +1,16 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>https://heorlytics.github.io/dceasimR/404.html</loc></url>
+<url><loc>https://heorlytics.github.io/dceasimR/CONTRIBUTING.html</loc></url>
 <url><loc>https://heorlytics.github.io/dceasimR/LICENSE-text.html</loc></url>
 <url><loc>https://heorlytics.github.io/dceasimR/LICENSE.html</loc></url>
-<url><loc>https://heorlytics.github.io/dceasimR/articles/01_introduction_to_dcea.html</loc></url>
-<url><loc>https://heorlytics.github.io/dceasimR/articles/02_aggregate_dcea_tutorial.html</loc></url>
-<url><loc>https://heorlytics.github.io/dceasimR/articles/03_full_dcea_tutorial.html</loc></url>
-<url><loc>https://heorlytics.github.io/dceasimR/articles/04_inequality_measures.html</loc></url>
-<url><loc>https://heorlytics.github.io/dceasimR/articles/05_social_welfare_functions.html</loc></url>
-<url><loc>https://heorlytics.github.io/dceasimR/articles/06_nice_submission_workflow.html</loc></url>
-<url><loc>https://heorlytics.github.io/dceasimR/articles/07_international_applications.html</loc></url>
 <url><loc>https://heorlytics.github.io/dceasimR/articles/index.html</loc></url>
+<url><loc>https://heorlytics.github.io/dceasimR/articles/v01_introduction_to_dcea.html</loc></url>
+<url><loc>https://heorlytics.github.io/dceasimR/articles/v02_aggregate_dcea_tutorial.html</loc></url>
+<url><loc>https://heorlytics.github.io/dceasimR/articles/v03_full_dcea_tutorial.html</loc></url>
+<url><loc>https://heorlytics.github.io/dceasimR/articles/v04_inequality_measures.html</loc></url>
+<url><loc>https://heorlytics.github.io/dceasimR/articles/v05_social_welfare_functions.html</loc></url>
+<url><loc>https://heorlytics.github.io/dceasimR/articles/v06_nice_submission_workflow.html</loc></url>
+<url><loc>https://heorlytics.github.io/dceasimR/articles/v07_international_applications.html</loc></url>
 <url><loc>https://heorlytics.github.io/dceasimR/authors.html</loc></url>
 <url><loc>https://heorlytics.github.io/dceasimR/index.html</loc></url>
 <url><loc>https://heorlytics.github.io/dceasimR/news/index.html</loc></url>
