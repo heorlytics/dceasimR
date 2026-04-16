@@ -47,6 +47,6 @@ result <- run_aggregate_dcea(
   population_size = 10000, wtp = 20000
 )
 generate_dcea_report(result, format = "html")
-#> Report written to: /tmp/RtmpxZbyGL/dcea_report_1a90496f78bf.html
+#> Report written to: /tmp/RtmpORQYMc/dcea_report_1ae71dbc64ec.html
 # }
 ```

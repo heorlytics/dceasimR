@@ -38,6 +38,6 @@ result <- run_aggregate_dcea(
   population_size = 10000, wtp = 20000
 )
 export_dcea_excel(result, file.path(tempdir(), "my_dcea_results.xlsx"))
-#> DCEA results exported to: /tmp/RtmpxZbyGL/my_dcea_results.xlsx
+#> DCEA results exported to: /tmp/RtmpORQYMc/my_dcea_results.xlsx
 # }
 ```
