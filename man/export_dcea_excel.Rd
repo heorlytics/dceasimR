@@ -24,11 +24,11 @@ including the summary table, per-group results, inequality indices, and
 social welfare profile.
 }
 \examples{
-\dontrun{
+\donttest{
 result <- run_aggregate_dcea(
   icer = 25000, inc_qaly = 0.5, inc_cost = 12500,
   population_size = 10000, wtp = 20000
 )
-export_dcea_excel(result, "my_dcea_results.xlsx")
+export_dcea_excel(result, file.path(tempdir(), "my_dcea_results.xlsx"))
 }
 }

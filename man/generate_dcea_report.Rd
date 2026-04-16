@@ -32,7 +32,7 @@ Renders a complete DCEA report as an HTML, Word, or PDF document using
 R Markdown.
 }
 \examples{
-\dontrun{
+\donttest{
 result <- run_aggregate_dcea(
   icer = 25000, inc_qaly = 0.5, inc_cost = 12500,
   population_size = 10000, wtp = 20000

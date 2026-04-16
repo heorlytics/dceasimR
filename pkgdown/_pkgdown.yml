@@ -125,10 +125,6 @@ reference:
       - compute_ridit_scores
       - prepare_subgroup_cea
 
-  - title: "Interactive App"
-    contents:
-      - launch_dcea_app
-
   - title: "Datasets"
     desc: "Preloaded baseline health distributions"
     contents:

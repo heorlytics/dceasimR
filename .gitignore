@@ -24,3 +24,6 @@
 .DS_Store
 Thumbs.db
 docs
+
+# Claude Code
+.claude/

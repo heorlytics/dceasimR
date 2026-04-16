@@ -14,8 +14,7 @@
 #'   \item \code{\link{calc_ede}} — Equally Distributed Equivalent health
 #'   \item \code{\link{plot_equity_impact_plane}} — Equity-efficiency impact plane
 #'   \item \code{\link{get_baseline_health}} — Preloaded baseline distributions
-#'   \item \code{\link{launch_dcea_app}} — Interactive Shiny application
-#' }
+#' #' }
 #'
 #' @section Key references:
 #' Cookson R, Griffin S, Norheim OF, Culyer AJ (2020). Distributional

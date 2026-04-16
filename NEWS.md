@@ -28,7 +28,6 @@
 * `generate_nice_table()` — NICE-formatted submission tables
 * `export_dcea_excel()` — Excel export in NICE submission format
 * `generate_dcea_report()` — full HTML/Word/PDF DCEA reports
-* `launch_dcea_app()` — interactive Shiny application
 
 ### Datasets
 
