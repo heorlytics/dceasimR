@@ -30,8 +30,17 @@ A ggplot2 faceted plot.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-# Requires user-supplied staircase data
-plot_inequality_staircase(my_staircase_data)
-} # }
+staircase_df <- data.frame(
+  step       = rep(1:5, each = 5),
+  step_label = rep(c("Prevalence", "Eligibility", "Uptake",
+                     "Clinical effect", "Opportunity cost"), each = 5),
+  group      = rep(1:5, times = 5),
+  group_label = rep(paste("Q", 1:5), times = 5),
+  value      = c(0.30, 0.28, 0.25, 0.22, 0.18,
+                 0.90, 0.88, 0.85, 0.82, 0.80,
+                 0.70, 0.65, 0.60, 0.55, 0.50,
+                 0.45, 0.44, 0.43, 0.42, 0.40,
+                 0.20, 0.18, 0.17, 0.15, 0.12)
+)
+plot_inequality_staircase(staircase_df)
 ```

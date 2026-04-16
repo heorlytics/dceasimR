@@ -26,10 +26,7 @@ impact plane visualisation, and sensitivity analysis.
   — Equity-efficiency impact plane
 
 - [`get_baseline_health`](https://heorlytics.github.io/dceasimR/reference/get_baseline_health.md)
-  — Preloaded baseline distributions
-
-- [`launch_dcea_app`](https://heorlytics.github.io/dceasimR/reference/launch_dcea_app.md)
-  — Interactive Shiny application
+  — Preloaded baseline distributions \#'
 
 ## Key references
 

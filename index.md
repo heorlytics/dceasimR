@@ -25,8 +25,6 @@ welfare function weights.
 - **Preloaded data** — England (IMD quintile), Canada (income quintile),
   WHO regions
 - **NICE-formatted export** — tables, Excel workbooks, HTML reports
-- **Interactive Shiny app** —
-  [`launch_dcea_app()`](https://heorlytics.github.io/dceasimR/reference/launch_dcea_app.md)
 
 ## NICE 2025 compliance
 
@@ -73,9 +71,6 @@ plot_ede_profile(result, eta_range = seq(0, 10, 0.1))
 
 # Export NICE-formatted table
 generate_nice_table(result, format = "flextable")
-
-# Launch interactive Shiny app
-launch_dcea_app()
 ```
 
 ## Documentation

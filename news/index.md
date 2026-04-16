@@ -57,8 +57,6 @@
   — Excel export in NICE submission format
 - [`generate_dcea_report()`](https://heorlytics.github.io/dceasimR/reference/generate_dcea_report.md)
   — full HTML/Word/PDF DCEA reports
-- [`launch_dcea_app()`](https://heorlytics.github.io/dceasimR/reference/launch_dcea_app.md)
-  — interactive Shiny application
 
 #### Datasets
 

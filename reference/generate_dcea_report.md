@@ -41,11 +41,12 @@ Invisibly returns the output file path.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 result <- run_aggregate_dcea(
   icer = 25000, inc_qaly = 0.5, inc_cost = 12500,
   population_size = 10000, wtp = 20000
 )
 generate_dcea_report(result, format = "html")
-} # }
+#> Report written to: /tmp/RtmpxZbyGL/dcea_report_1a90496f78bf.html
+# }
 ```

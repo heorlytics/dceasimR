@@ -55,8 +55,6 @@
   : Generate NICE-formatted DCEA submission table
 - [`get_baseline_health()`](https://heorlytics.github.io/dceasimR/reference/get_baseline_health.md)
   : Get baseline health distribution for a country
-- [`launch_dcea_app()`](https://heorlytics.github.io/dceasimR/reference/launch_dcea_app.md)
-  : Launch the interactive DCEA Shiny Application
 - [`merge_cea_with_baseline()`](https://heorlytics.github.io/dceasimR/reference/merge_cea_with_baseline.md)
   : Merge CEA model output with baseline health distribution
 - [`normalise_weights()`](https://heorlytics.github.io/dceasimR/reference/normalise_weights.md)

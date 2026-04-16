@@ -32,11 +32,12 @@ Invisibly returns `filepath`.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
 result <- run_aggregate_dcea(
   icer = 25000, inc_qaly = 0.5, inc_cost = 12500,
   population_size = 10000, wtp = 20000
 )
-export_dcea_excel(result, "my_dcea_results.xlsx")
-} # }
+export_dcea_excel(result, file.path(tempdir(), "my_dcea_results.xlsx"))
+#> DCEA results exported to: /tmp/RtmpxZbyGL/my_dcea_results.xlsx
+# }
 ```
